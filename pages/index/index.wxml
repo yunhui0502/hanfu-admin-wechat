@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view>
+
+  <swiper class='u-wrp-bnr' indicator-active-color='rgba(255,255,255,0.11)' indicator-color="#fff" style="height:440rpx;" indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+    <block wx:for="{{picdata}}" wx:for-index="index">
+      <swiper-item>
+        <image src='{{item.img}}' class='u-img-slide' mode='aspectFill' bindtap="everyday" data-index="{{index}}" data-id="{{item.id}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 优惠券列表的位置 -->
+  <view class='header'>
+    <scroll-view class='scroll_w' scroll-x scroll-left="{{scrollLeft}}">
+      <block wx:for="{{activeList}}" wx:key="{{this}}">
+        <view style="word-break: break-all;overflow: hidden;text-overflow:ellipsis;" class="item {{currentTab==index ? 'on' : ''}}" bindtap='topNavChange' data-current="{{index}}" data-type="{{item.type}}">{{item.activityName}}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <!-- list -->
+  <view style="display:flex;flex-wrap: wrap;justify-content:space-between;padding:0 39rpx;margin-top:30rpx;">
+    <view style="margin-bottom:18px; border:2px solid #F5E2AB;border-top:1.5px solid #F5E2AB;border-radius:8px;padding-bottom:25rpx;background:#211918;" wx:for="{{personList}}" wx:for-index="idx" wx:for-item="item">
+      <!-- <view style="position:relative;width:100%;display:flex;"> -->
+      <!-- </view> -->
+      <view  style="width:324rpx;height:338rpx;border-radius:6px 6px 0 0;overflow: hidden;">
+        <image src="{{item.img}}" mode='widthFix' data-img="{{item.img}}"  style="width:324rpx;height:338rpx;" bindtap="goinfer" data-userId="{{item.userId}}"></image>
+      </view>
+      <view style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+        <view style="">
+          <view style="font-size:34rpx;margin-left:20rpx;margin-top:4px;word-break: break-all;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;color:#FFE18E;">{{item.username?item.username:'用户名'}}</view>
+          <view style="font-size:30rpx;color:#999899;margin-left:20rpx;margin-top:4px;color:#FFE18E;max-width:200rpx;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">{{item.departmentName?item.departmentName:'部门名称'}}</view>
+        </view>
+        <view style="width:40px;height:30px;" catchtap="canclezan" wx:if="{{type=='praise'&&item.record==true}}" data-index="{{idx}}">
+          <image src="../img/dianzan.png" style="width:20px;height:20px;margin-right:17px;margin-top:10rpx"></image>
+        </view>
+        <view style="width:40px;height:30px;" catchtap="dianzan" wx:if="{{type=='praise'&&item.record==false}}" data-index="{{idx}}">
+          <image src="../img/dainzan1.png" style="width:20px;height:20px;margin-right:17rpx;margin-top:10rpx"></image>
+        </view>
+        <!-- <view wx:if="{{item.totalScore!=0&&type=='score'}}" style="width:50%; color:#fff;color:#FFE18E;font-size:34rpx;">总分：{{item.totalScore}} </view> -->
+      </view>
+    </view>
+  </view>
+  <view style="width:100%;height:100%;background:rgba(0,0,0,0.5);position:fixed;top:0;left:0;" wx:if="{{show}}">
+    <view style="width:87%;background:#fff;padding:10rpx 2% ;margin-left:4%;padding-bottom:60rpx;padding-top:100rpx;border-radius:10px; margin-top:200rpx;">
+      <view style="color:#333333;font-size:20px;font-weight:blod;display:flex;justify-content:center;">{{loginflag?'您还未登录':'登录失败，请重新登录'}}</view>
+      <view style="color:#999999;font-size:14px;font-weight:blod;justify-content:center;display:flex;margin-top:16rpx;">请先登录再进行操作</view>
+      <view style="display:flex;justify-content:center;margin-top:47rpx;">
+        <image src="../img/weixin.png" style="width:178rpx;height:178rpx;"></image>
+      </view>
+      <view style="display:flex;align-items:center;margin-top:55rpx;justify-content:space-between;padding:0 30px;">
+        <view style="justify-content:center;background:#E5E5E4;color:#999999;border-radius:55rpx; width:208rpx;height:70rpx;font-size:32rpx;display:flex;align-items:center;height:90rpx;" bindtap="nologin">暂不登录</view>
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" style=" background-image: linear-gradient(to right, #F49E31, #ED733D);border-radius:55rpx;justify-content:center;width:208rpx;height:90rpx;font-size:32rpx;display:flex;align-items:center;color:#fff;">立即登录</button>
+
+      </view>
+    </view>
+  </view>
+
+</view>

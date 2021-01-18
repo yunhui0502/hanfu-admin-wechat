@@ -1,0 +1,262 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": true,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.9.3",
+  "appid": "wx16159fcc93b0400c",
+  "projectname": "voteCheng",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/power/power",
+          "pathName": "pages/power/power",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/record/record",
+          "pathName": "pages/record/record",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/activeList/activeList",
+          "pathName": "pages/activeList/activeList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/empower/empower",
+          "pathName": "pages/empower/empower",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/score/score",
+          "pathName": "pages/score/score",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/information/information",
+          "pathName": "pages/information/information",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 7,
+          "name": "pages/personEvaluate/personEvaluate",
+          "pathName": "pages/personEvaluate/personEvaluate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/job/job",
+          "pathName": "pages/job/job",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/person/person",
+          "pathName": "pages/person/person",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/updatePerson/updatePerson",
+          "pathName": "pages/updatePerson/updatePerson",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/dailyPraise/dailyPraise",
+          "pathName": "pages/dailyPraise/dailyPraise",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/power/power",
+          "pathName": "pages/power/power",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/ping/ping",
+          "pathName": "pages/ping/ping",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/personEvaluate/personEvaluate",
+          "pathName": "pages/personEvaluate/personEvaluate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/pingjia/pingjia",
+          "pathName": "pages/pingjia/pingjia",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/pingyou/pingyou",
+          "pathName": "pages/pingyou/pingyou",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/pingyou/pingyou",
+          "pathName": "pages/pingyou/pingyou",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/navpic/navpic",
+          "pathName": "pages/navpic/navpic",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/persondetail/persondetail",
+          "pathName": "pages/persondetail/persondetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/company/company",
+          "pathName": "pages/company/company",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/vote/vote",
+          "pathName": "pages/vote/vote",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/choose/choose",
+          "pathName": "pages/choose/choose",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/contact/contact",
+          "pathName": "pages/contact/contact",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/sort/sort",
+          "pathName": "pages/sort/sort",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

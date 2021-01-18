@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view>
+
+
+
+  <!-- 优惠券列表的位置 -->
+  <view class='header'>
+    <scroll-view class='scroll_w' scroll-x scroll-left="{{scrollLeft}}">
+      <block wx:for="{{activeList}}" wx:key="{{this}}">
+        <view style="word-break: break-all;overflow: hidden;text-overflow:ellipsis;" class="item {{currentTab==index ? 'on' : ''}}" bindtap='topNavChange' data-current="{{index}}" data-type="{{item.type}}" data-activityName="{{item.activityName}}">{{item.activityName}}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <!-- list -->
+  <view style="display:flex;flex-wrap: wrap;justify-content:space-between;padding:0 39rpx;margin-top:30rpx;">
+    <view style="margin-bottom:18px; border:2px solid #F5E2AB;border-top:1.5px solid #F5E2AB;border-radius:8px;padding-bottom:25rpx;" wx:for="{{personList}}" wx:for-index="idx" wx:for-item="item" bindtap="goinfer" data-userId="{{item.userId}}">
+      <!-- <view style="position:relative;width:100%;display:flex;"> -->
+      <!-- </view> -->
+
+      <image src="{{item.img}}" style="width:324rpx;height:286rpx;border-radius:6px;"></image>
+      <view style="display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:2px;">
+        <view >
+          <view style="display:flex;align-items:center;margin-top:4px;">
+            <view style="font-size:34rpx;margin-left:20rpx;word-break: break-all;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;color:#FFE18E;">{{item.username}}·</view>
+            <view style="color:#B89245;font-size:24rpx;">{{item.departmentName?item.departmentName:'部门名称'}}</view>
+          </view>
+          <view style="font-size:30rpx;color:#999899;margin-left:20rpx;margin-top:4px;color:#FFE18E;width:85px; word-break: break-all;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">{{activityName}}</view>
+        </view>
+        <view>
+            <view style="display:flex;align-items:center;margin-right:10px;" wx:if="{{type=='ticket_count'||type=='praise'}}">
+              <image src="../img/huang.png" style="width:18px;height:15px;margin-right:3px;"></image>
+              <view style="color:#fff;font-size:18px;color:#B89245;">{{item.voteCount}}</view>
+            </view>
+             <view style="display:flex;align-items:center;margin-right:10px;" wx:if="{{type=='score'||type=='ticket_count'}}">
+              <image src="../img/xihuan.png" style="width:18px;height:15px;margin-right:3px;"></image>
+              <view style="color:#fff;font-size:18px;color:#B89245;">{{item.score}}{{item.totalScore}}</view>
+            </view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+  <view style="width:100%;height:100%;background:rgba(0,0,0,0.5);position:fixed;top:0;left:0;" wx:if="{{show}}">
+    <view style="width:87%;background:#fff;padding:10rpx 2% ;margin-left:4%;padding-bottom:60rpx;padding-top:100rpx;border-radius:10px; margin-top:200rpx;">
+      <view style="color:#333333;font-size:20px;font-weight:blod;display:flex;justify-content:center;">你还未登录</view>
+      <view style="color:#999999;font-size:14px;font-weight:blod;justify-content:center;display:flex;margin-top:16rpx;">请先登录再进行操作</view>
+      <view style="display:flex;justify-content:center;margin-top:47rpx;">
+        <image src="../img/weixin.png" style="width:178rpx;height:178rpx;"></image>
+      </view>
+      <view style="display:flex;align-items:center;margin-top:55rpx;justify-content:space-between;padding:0 30px;">
+        <view style="justify-content:center;background:#E5E5E4;color:#999999;border-radius:55rpx; width:208rpx;height:70rpx;font-size:32rpx;display:flex;align-items:center;height:90rpx;">暂不登录</view>
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" style=" background-image: linear-gradient(to right, #F49E31, #ED733D);border-radius:55rpx;justify-content:center;width:208rpx;height:90rpx;font-size:32rpx;display:flex;align-items:center;color:#fff;">立即登录</button>
+
+      </view>
+    </view>
+  </view>
+
+
+
+</view>

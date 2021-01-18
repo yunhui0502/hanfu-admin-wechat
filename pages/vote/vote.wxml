@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view>
+  <swiper class='u-wrp-bnr' indicator-active-color='rgba(255,255,255,0.11)' indicator-color="#fff" style="height:440rpx;" indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+    <block wx:for="{{picdata}}" wx:for-index="index">
+      <swiper-item>
+        <image src='{{item.img}}' class='u-img-slide' mode='aspectFill'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view style="display:flex;flex-wrap: wrap;justify-content:space-between;padding:0 39rpx;margin-top:30rpx;" >
+    <view style="position:relative; padding-bottom:15px; border:2px solid #F5E2AB;border-radius:10px;   margin-bottom:18px;background:#211918;" wx:for="{{userdata}}" wx:for-index="idx" wx:for-item="item"  bindtap="ping" data-userId="{{item.userId}}">
+        <view wx:if="{{item.record==true}}" style="color:#fff;font-size:34rpx; width:100%;height:100%;border-radius:10px;border-radius:10px;    background:rgba(0,0,0,0.5); position:absolute;top:0rpx;left:0;z-index:1;">
+          <image src="../img/yi.png" style="width: 64px;height: 42px;position: absolute;bottom: 10px;right: 10px;"></image>
+        </view>  
+        <view  style="width:324rpx;height:338rpx;border-radius:6px 6px 0 0;overflow: hidden;">
+        <image src="{{item.img}}" mode='widthFix'   style="width:324rpx;height:338rpx;"></image>
+      </view>
+         <!-- <image src="{{item.img}}" style="width:324rpx;height:286rpx;border-radius:6px;"></image> -->
+      <view style="display:flex;align-items:center;margin-top:4px;justify-content:space-between;">
+        <view>
+          <view style="font-size:34rpx;margin-left:20rpx;width:100rpx;word-break: break-all;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;color:#FFE18E;">{{item.username}}</view>
+          <view style="font-size:30rpx;color:#FFE18E; margin-left:20rpx;margin-top:4px;">{{item.departmentName}}</view>
+        </view>
+        <view class='itembox' wx:if="{{type=='ticket_count'}}">
+          <view wx:for="{{item.imgs}}" wx:for-index="idx1" wx:for-item="item1" bindtap='select'  data-parent="{{idx}}" data-index="{{idx1}}">
+            <image class="star" src="{{item1.id>item.starId?src2:src1}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view  bindtap="neitui" style="position:fixed;left:45%;bottom:30px; display:flex;align-items:center;justify-content:center; font-size:37rpx;font-family:PingFang SC;color:rgba(51,51,51,1);width:55px;height:55px;background:linear-gradient(45deg,rgba(245,226,171,1),rgba(184,146,69,1));border-radius:50%;" wx:if="{{showbtn==true&&type=='election'}}">
+  提交
+  </view>
+   <view  style="position:fixed;left:45%;bottom:30px; display:flex;align-items:center;justify-content:center;background:#eee; font-size:30rpx;font-family:PingFang SC;color:rgba(51,51,51,1);width:55px;height:55px;border-radius:50%;" wx:if="{{showbtn==false&&type=='election'}}">
+  已提交
+  </view>
+</view>

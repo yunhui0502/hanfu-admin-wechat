@@ -1,0 +1,66 @@
+<view>
+  <view style="display:flex;align-items:center;margin-top:55rpx;" >
+    <image src="{{imageList?imageList:avatar}}" style="width:150rpx;height:150rpx;margin:0 auto;border-radius:50%;" bindtap="chooseImage"></image>
+  </view>
+  <view style="color:#fff;font-size:30rpx;text-align:center;margin-top:27rpx;" wx:if="{{show}}">点击修改头像</view>
+  <view style="color:#F5E2AB;text-align:center;font-size:35rpx;margin-top:60rpx;font-family:PingFang SC;font-family:PingFang SC;">真实姓名</view>
+  <view style="color:#fff;text-align:center;font-size:29rpx;margin-top:15rpx;">
+    <input value="{{name}}" placeholder="请填写真实姓名" bindblur="ming"></input>
+  </view>
+  <!-- <view style="color:#fff;text-align:center;font-size:29rpx;margin-top:15rpx;">   -->
+  <!-- <input value="{{name}}"  placeholder="请填写姓名" bindblur="ming" ></input> -->
+  <!-- </view> -->
+
+  <!-- <view style="color:#F5E2AB;text-align:center;font-size:35rpx;margin-top:90rpx;font-family:PingFang SC;font-family:PingFang SC;">性别</view> -->
+  <!-- <view style="display:flex;align-items:center;margin-top:30rpx;">
+    <image src="../img/nan.png" style="width:50rpx;height:50rpx;margin:0 auto;"></image>
+  </view> -->
+  <view style="color:#F5E2AB;text-align:center;font-size:35rpx;margin-top:90rpx;font-family:PingFang SC;font-family:PingFang SC;">岗位名称</view>
+  <view style="color:#fff;text-align:center;font-size:29rpx;margin-top:15rpx;">
+    <input value="{{phone}}" placeholder="请填写岗位名称" bindblur="phoneperson"></input>
+  </view>
+  <!-- <view style="display:flex;align-items:center;justify-content:space-between;padding:0 10%;margin-top:100rpx;">
+    <view style="flex:1;border-right:1rpx solid #fff;">
+      <view style="color:#fff;font-size:35rpx;">
+        1995年
+      </view>
+      <view style="color:#F5E2AB;font-size:24rpx;margin-top:50rpx;">出生年月</view>
+    </view>
+    <view style="width: 38%;display:flex;flex-direction:column;align-items:center;border-right:1rpx solid #fff;">
+      <view style="color:#fff;font-size:35rpx;">
+        1995年
+      </view>
+      <view style="color:#F5E2AB;font-size:24rpx;margin-top:50rpx;">出生年月</view>
+    </view>
+    <view style="flex:1;display:flex;flex-direction:column;align-items:flex-end;">
+      <view style="color:#fff;font-size:35rpx;">
+        1995年
+      </view>
+      <view style="color:#F5E2AB;font-size:24rpx;margin-top:50rpx;">出生年月</view>
+    </view>
+  </view> -->
+  <view class="section">
+    <view style="color:#F5E2AB;text-align:center;font-size:35rpx;margin-top:90rpx;font-family:PingFang SC;font-family:PingFang SC;">入职日期</view>
+    <picker mode="date" value="{{date}}" start="2000-09-01" bindchange="bindDateChange">
+      <view style="color:#fff;text-align:center;font-size:29rpx;margin-top:15rpx;">
+        <input value="{{date}}" placeholder="请选择入职日期" bindblur="phonedate" disabled="true"></input>
+      </view>
+    </picker>
+  </view>
+
+
+<view style="color:#F5E2AB;text-align:center;font-size:35rpx;margin-top:90rpx;font-family:PingFang SC;font-family:PingFang SC;">部门名称</view>
+  <view bindtap="getdetail" style="margin:0 auto;margin-top:30rpx; display:flex;align-items:center; width:60%;height:90rpx;background:rgba(27,27,27,1);border:1px solid #F5E2AB;border-radius:45px;">
+
+    <picker wx:if="{{show}}" bindchange="bindPickerChange" value="{{index}}" range="{{array}}" style="width:100%;height:90%;margin-left:30px;">
+      <view style="color:#fff;width:100%;height:38px;display:flex;align-items:center;justify-content:space-between;">
+        <input value="{{index}}" placeholder="请选择部门" style="display:block; width:90%;height:46px;margin-top:4px" disabled="true" ></input>
+        <image src="../img/xiala.png" style="width:20px;height:12px;margin-right:30px;"></image>
+      </view>
+    </picker>
+  </view>
+
+
+
+  <view class="btn" bindtap="ping">保存</view>
+</view>

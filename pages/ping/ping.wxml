@@ -1,0 +1,74 @@
+<view>
+  <view style="display:flex;align-items:center;justify-content:space-between;padding-right:30rpx">
+    <view>
+      <view style="display:flex;flex-direction:column;align-items:center;width:100px;">
+        <view class="wang">
+          王昭君
+        </view>
+        <image src="../img/di.png" style="height:8px;width:90px;"></image>
+      </view>
+      <view class="first">第一事业部</view>
+      <view class="first">
+        <text>入职时间</text>
+        <text style="margin-left:10rpx;">2019.11.16</text>
+      </view>
+      <view class="lian">
+        <text>联系电话</text>
+        <text>18963965648</text>
+      </view>
+    </view>
+    <view style="position:relative;">
+      <image src="../img/person.png" style="width:80px;height:80px;position:absolute;top:10px;left:10px;"></image>
+      <image src="../img/yuan.png" style="width:100px;height:100px;"></image>
+    </view>
+  </view>
+  <view style="background:#141414; margin-left: 30rpx;margin-top:50rpx;overflow:hidden;">
+    <view class="ge" style="margin-top:40rpx;">个人评价</view>
+    <view style="font-weight:bold;color:rgba(255,255,255,1);margin-top:50rpx;">A</view>
+    <view style="color:#fff;font-size:28rpx;border-bottom:1px solid #535353;margin-top:30rpx;padding-bottom:32rpx;">评价评价评价评价评价评价</view>
+    <view style="font-weight:bold;color:rgba(255,255,255,1);margin-top:50rpx;">B</view>
+    <view style="color:#fff;font-size:28rpx;border-bottom:1px solid #535353;margin-top:30rpx;padding-bottom:32rpx;">评价评价评价评价评价评价</view>
+    <view style="font-weight:bold;color:rgba(255,255,255,1);margin-top:50rpx;">C</view>
+    <view style="color:#fff;font-size:28rpx;border-bottom:1px solid #535353;margin-top:30rpx;padding-bottom:32rpx;">评价评价评价评价评价评价</view>
+    <view style="font-weight:bold;color:rgba(255,255,255,1);margin-top:50rpx;">D</view>
+    <view style="color:#fff;font-size:28rpx;border-bottom:1px solid #535353;margin-top:30rpx;padding-bottom:32rpx;">评价评价评价评价评价评价</view>
+  </view>
+  <view>
+    <view>
+      A
+    </view>
+    <view style="display:flex;justify-content:space-between;padding: 0 30rpx;">
+      <view style="display:flex;flex-direction:column;align-items:center;width:20%;">
+        <view style="color:#fff;font-weight:bold;margin-bottom:10px;">A</view>
+        <view style="width:100%;height:36px;border:1px solid #F5E2AB;border-radius:5px;padding-left:10px;">
+          <input style="display:block;width:100%;height:100%;color:#fff;" type="number" placeholder="请评分"></input>
+        </view>
+      </view>
+
+      <view style="display:flex;flex-direction:column;align-items:center;width:20%;">
+        <view style="color:#fff;font-weight:bold;margin-bottom:10px;">B</view>
+        <view style="width:100%;height:36px;border:1px solid #F5E2AB;border-radius:5px;padding-left:10px;">
+          <input style="display:block;width:100%;height:100%;color:#fff;" type="number"  placeholder="请评分"></input>
+        </view>
+      </view>
+     <view style="display:flex;flex-direction:column;align-items:center;width:20%;">
+        <view style="color:#fff;font-weight:bold;margin-bottom:10px;">C</view>
+        <view style="width:100%;height:36px;border:1px solid #F5E2AB;border-radius:5px;padding-left:10px;">
+          <input style="display:block;width:100%;height:100%;color:#fff;" type="number"  placeholder="请评分"></input>
+        </view>
+      </view>
+     <view style="display:flex;flex-direction:column;align-items:center;width:20%;">
+        <view style="color:#fff;font-weight:bold;margin-bottom:10px;">D</view>
+        <view style="width:100%;height:36px;border:1px solid #F5E2AB;border-radius:5px;padding-left:10px;">
+          <input style="display:block;width:100%;height:100%;color:#fff;" type="number"  placeholder="请评分"></input>
+        </view>
+      </view>
+    </view>
+
+     <view class="ti">
+      提交
+     </view>
+  </view>
+
+
+</view>

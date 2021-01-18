@@ -1,0 +1,35 @@
+page {
+  background: #1b1b1b;
+}
+
+textarea {
+  margin: 0 auto;
+  width: 84%;
+  height: 788rpx;
+  padding: 30rpx;
+  font-size: 33rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(122, 122, 122, 1);
+  color: #fff;
+  line-height: 36rpx;
+  background: rgba(27, 27, 27, 1);
+  border: 4rpx solid;
+  border-image: linear-gradient(135deg, rgba(245, 226, 171, 1), rgba(184, 146, 69, 1)) 4 4;
+  border-radius: 10rpx;
+  margin-top: 36rpx;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 690rpx;
+  height: 90rpx;
+  background: linear-gradient(90deg, rgba(245, 226, 171, 1), rgba(184, 146, 69, 1));
+  border: 2rpx solid rgba(253, 255, 167, 1);
+  border-radius: 45rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  font-size: 35rpx;
+}

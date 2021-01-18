@@ -1,0 +1,19 @@
+<view style="padding:40rpx 30rpx; ">
+  <view wx:for="{{activeList}}" wx:for-index="idx" wx:for-item="item" wx:if="{{item.activiyType!='praise'}}" style="display:flex;justify-content:space-between;background:#1B1B1B;align-items:center;margin-bottom:30rpx;padding:10rpx;border:1px solid #F5E2AB;border-radius:10px;">
+    <view style="margin-left:40rpx;color:#fff;">
+      {{item.activityName }}
+    </view>
+    <view style="display:flex;align-items:center;padding:40rpx;" wx:if="{{item.isTimingStart==1}}" data-id="{{item.id}}" data-type="{{item.activiyType}}" bindtap="goVote">
+      <view style="color:rgba(245,226,171,1);margin-right:15rpx;background:rgba(27,27,27,1);" wx:if="{{item.activiyType=='ticket_count'}}">去投票</view>
+      <view style="color:rgba(245,226,171,1);;margin-right:15rpx;" wx:if="{{item.activiyType=='score'}}">去打分</view>
+      <image src="../img/back.png" style="width:16rpx;height:27rpx;"></image>
+    </view>
+    <view style="display:flex;align-items:center;padding:40rpx;" wx:if="{{item.isTimingStart==0}}">
+      <image src="../img/wei.png" style="width:36rpx;height:35rpx;"></image>
+      <view style="color:#DC0000;margin-right:15rpx;color:#7A7A7A;margin-left:10rpx">活动尚未开启</view>
+    </view>
+  </view>
+    <view style="display:flex;justify-content:center;color:#fff;margin-top:50%;" wx:if="{{show||pingweishow}}">
+    您还不是活动评委呦~
+  </view>
+</view>

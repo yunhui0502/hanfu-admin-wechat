@@ -1,0 +1,17 @@
+page{
+  background:#1B1B1B;
+}
+.que{
+width:690rpx;
+height:90rpx;
+background:linear-gradient(90deg,rgba(245,226,171,1),rgba(184,146,69,1));
+border:2rpx solid rgba(253,255,167,1);
+border-radius:45px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+margin-top: 100rpx;
+font-weight: bold;
+font-size: 32rpx;
+}

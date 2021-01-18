@@ -1,0 +1,59 @@
+/* pages/login/login.wxss */
+
+.text{
+  margin-left: 30px;
+  display:block;
+  color: #333333;
+  font-size:24px
+}
+view{
+  width: 90%;
+  height: 45px;
+  background:#f4f4f4;
+  margin: 0 auto;
+  margin-top:100px;
+  border-radius:20px
+}
+input{
+   width: 90%;
+   height: 45px;
+   margin-left: 30px;
+}
+.view{
+  margin-top: 30px
+}
+.view1{
+  margin-top: 30px;
+ 
+  
+}
+.yzm{
+  width:120px;
+  height: 20px;
+  background: red;
+  text-align: center;
+  line-height:20px;
+  border-radius: 0;
+  margin-top: -33px;
+  float: right;
+  margin-right: -10px;
+  background: none;
+  border-left: 1px solid#FF3E3E;
+  color: #F49D31;
+  font-size: 12px;
+  
+}
+span{
+  margin-right: 35px
+}
+.register{
+   border-radius: 20px;
+   /* position:fixed; */
+   text-align:center;
+   /* bottom: 0; */
+   background: #F49D31;
+   margin: 0 auto;
+   line-height: 45px;
+   margin-top: 150px;
+   color:#ffffff
+}

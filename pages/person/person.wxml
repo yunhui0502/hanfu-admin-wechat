@@ -1,0 +1,73 @@
+<view style="padding-top:30px;">
+  <view style="height:340rpx;display:flex;align-items:center;justify-content:space-between;padding:0 30rpx;padding-right:45rpx;">
+    <view style="">
+      <view style="color:#fff;font-size:50rpx;background:linear-gradient(180deg,rgba(245,226,171,1) 0%, rgba(184,146,69,1) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+        {{nickName?nickName:'请登录'}}
+      </view>
+      <view style="color:rgba(245,226,171,1);margin-top:10rpx;font-size:25rpx;" >{{userInfo.departmentName?userInfo.departmentName:'请点击右侧头像完善个人信息'}}</view>
+      <view style="color:rgba(245,226,171,1);margin-top:10rpx;font-size:25rpx;">入职时间: {{userInfo.date?userInfo.date:''}}</view>
+      <view style="color:rgba(245,226,171,1);margin-top:10rpx;font-size:25rpx;" >岗位名称: {{userInfo.phone?userInfo.phone:''}}</view>
+    </view>
+    <view style="width:140rpx;">
+    <image src="{{avator?avator:'../img/person.png'}}" style="width:140rpx;height:140rpx;border-radius:50%;" bindtap="inforava"></image>
+    <view style="width:100%;height:50rpx;text-align:center;line-height:50rpx;border-radius:8rpx;box-sizing:border-box;background:linear-gradient(90deg,rgba(234,222,140,1),rgba(203,177,93,1));margin-top:30rpx;color:black;font-size:25rpx" bindtap="loginPerson" wx:if="{{dlflag}}">登录</view>
+    </view>
+    
+  </view>
+  <view style="margin-top:40rpx;background:#141414;">
+
+    <view style="display:flex;justify-content:space-between;align-items:center;padding-left:40rpx;" bindtap="jiang">
+      <view>
+        <image src="../img/record.png" style="width:40rpx;height:45rpx;"></image>
+      </view>
+      <view style="padding:30rpx 0;border-bottom:1rpx solid #535353;width:90%;color:#F5E2AB;">奖项信息</view>
+    </view>
+
+    <view style="display:flex;justify-content:space-between;align-items:center;padding-left:40rpx;" bindtap="canxun">
+      <view>
+        <image src="../img/toupiao.png" style="width:45rpx;height:45rpx;"></image>
+      </view>
+      <view style="padding:30rpx 0;border-bottom:1rpx solid #535353;width:90%;color:#F5E2AB;">参选记录</view>
+    </view>
+    <!-- <view style="display:flex;justify-content:space-between;align-items:center;padding-left:40rpx;" bindtap="infor">
+      <view>
+        <image src="../img/wo.png" style="width:45rpx;height:45rpx;"></image>
+      </view>
+      <view style="padding:30rpx 0;border-bottom:1rpx solid #535353;width:90%;color:#F5E2AB;">我的信息</view>
+    </view> -->
+    <view style="display:flex;justify-content:space-between;align-items:center;padding-left:40rpx;" bindtap="record">
+      <view>
+        <image src="../img/tou.png" style="width:40rpx;height:45rpx;"></image>
+      </view>
+      <view style="padding:30rpx 0;border-bottom:1rpx solid #535353;width:90%;color:#F5E2AB;">投票记录</view>
+    </view>
+    <view style="display:flex;justify-content:space-between;align-items:center;padding-left:40rpx;" bindtap="contact">
+      <view>
+        <image src="../img/lian.png" style="width:45rpx;height:45rpx;"></image>
+      </view>
+      <view style="padding:30rpx 0;border-bottom:1rpx solid #535353;width:90%;color:#F5E2AB;">联系我们</view>
+    </view>
+    <view style="display:flex;justify-content:space-between;align-items:center;padding-left:40rpx;" bindtap="xtSet">
+      <view>
+        <image src="../img/shezhi.png" style="width:45rpx;height:45rpx;"></image>
+      </view>
+      <view style="padding:30rpx 0;width:90%;color:#F5E2AB;">系统设置</view>
+    </view>
+  </view>
+
+    <view style="width:100%;height:100%;background:rgba(0,0,0,0.5);position:fixed;top:0;left:0;" wx:if="{{show}}">
+    <view style="width:87%;background:#fff;padding:10rpx 2% ;margin-left:4%;padding-bottom:60rpx;padding-top:100rpx;border-radius:10px; margin-top:200rpx;">
+      <view style="color:#333333;font-size:20px;font-weight:blod;display:flex;justify-content:center;">{{loginflag==true?'您还未登录':'登录失败，请重新登录'}}</view>
+      <view style="color:#999999;font-size:14px;font-weight:blod;justify-content:center;display:flex;margin-top:16rpx;">请先登录再进行操作</view>
+      <view style="display:flex;justify-content:center;margin-top:47rpx;">
+        <image src="../img/weixin.png" style="width:178rpx;height:178rpx;"></image>
+      </view>
+      <view style="display:flex;align-items:center;margin-top:55rpx;justify-content:space-between;padding:0 30px;">
+        <view style="justify-content:center;background:#E5E5E4;color:#999999;border-radius:55rpx; width:208rpx;height:70rpx;font-size:32rpx;display:flex;align-items:center;height:90rpx;" bindtap="nologin">暂不登录</view>
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" style=" background-image: linear-gradient(to right, #F49E31, #ED733D);border-radius:55rpx;justify-content:center;width:208rpx;height:90rpx;font-size:32rpx;display:flex;align-items:center;color:#fff;">立即登录</button>
+
+      </view>
+    </view>
+  </view>
+
+</view>

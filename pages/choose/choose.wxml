@@ -1,0 +1,31 @@
+<view style="padding:0 3%;width:94%; margin-top:30px;">
+  <view wx:for="{{list}}" style="display:flex;align-items:center;justify-content:space-between; margin-bottom:17px; height:134rpx;background:rgba(56,56,56,1);border:1px solid rgba(253,255,167,1);border-radius:10px;">
+    <view style="color:#EADE8C;margin-left:20px;font-size::15px;">
+      {{item.activityName}}
+    </view>
+    <view style="display:flex;align-items:center;margin-right:20px;">
+      <view style="{{item.activityType=='praise'?'display:flex;align-items:center; justify-content:flex-end;':'display:flex;align-items:center; margin-right:20px;justify-content:flex-end;'}} " wx:if="{{item.activityType=='praise'||item.activityType=='ticket_count'}}">
+        <image src="../img/guan.png" style="width:21px;height:15px;margin-right:5px;"></image>
+        <view style="color:#fff;">{{item.voteCount}}</view>
+      </view>
+      <view style="display:flex;align-items:center;" wx:if="{{iem.activityType=='score'||item.activityType=='ticket_count'}}">
+        <image src="../img/xihuan2.png" style="width:17px;height:17px;margin-right:5px;"></image>
+        <view style="color:#fff;">{{item.socre}}{{item.totalScore}}</view>
+      </view>
+      <image src="../img/jiang.png" style="width:24px;height:27px;margin-right:5px;" wx:if="{{item.activityType=='election'}}"></image>
+      <view style="display:flex;">
+        <view style="display:flex;align-items:center;" wx:if="{{item.activityType=='praise'}}">
+          <image src="../img/huang.png" style="width:18px;height:15px;"> </image>
+          <view style="font-size:35rpx;color:#333333;margin-left:5rpx;color:#fff;margin-left:10rpx;">{{item.voteCount}}</view>
+        </view>
+        <view class="{{type=='score'?'xingxing1':'xingxing'}}" wx:if="{{item.activityType=='score'}}">
+          <image src="../img/xihuan.png" style="width:16px;height:16px;"> </image>
+          <view style="font-size:35rpx;color:#333333;margin-left:5rpx;color:#fff;margin-left:10rpx;">{{item.totalScore}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="display:flex;justify-content:center;color:#fff;margin-top:50%;" wx:if="{{!show}}">
+    暂无数据
+  </view>
+</view>

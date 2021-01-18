@@ -1,0 +1,4 @@
+<view>
+  <textarea placeholder="工作经历"></textarea>
+  <view class="btn">保存</view>
+</view>

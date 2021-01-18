@@ -1,0 +1,6 @@
+  <view style="background:#1b1b1b">
+  
+  <view bindtap="submit" style="position:fixed;bottom:60%;left:3.5%; width:690rpx;height:90rpx;background:linear-gradient(90deg,rgba(245,226,171,1),rgba(184,146,69,1));border:1px solid rgba(253,255,167,1);border-radius:45px;display:flex;align-items:center;justify-content:center;">
+    退出登录
+  </view>
+  </view>

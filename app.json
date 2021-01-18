@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/intoindex/intoindex",
+    "pages/navpic/navpic",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/vote/vote",
+    "pages/activeList/activeList",
+    "pages/person/person",
+    "pages/sort/sort",
+    "pages/power/power",
+    "pages/record/record",
+    "pages/login/login",
+    "pages/empower/empower",
+    "pages/score/score",
+    "pages/information/information",
+    "pages/job/job",
+    "pages/updatePerson/updatePerson",
+    "pages/dailyPraise/dailyPraise",
+    "pages/ping/ping",
+    "pages/pingjia/pingjia",
+    "pages/pingyou/pingyou",
+    "pages/huo/huo",
+    "pages/persondetail/persondetail",
+    "pages/xianChang/xianChang",
+    "pages/checkperson/checkperson",
+    "pages/company/company",
+    "pages/scorecommon/scorecommon",
+    "pages/choose/choose",
+    "pages/contact/contact",
+    "pages/experience/experience",
+    "pages/companysec/companysec",
+    "pages/xtset/xtset"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#50412B",
+    "color": "#F2DEA6",
+    "selectedColor": "#000",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "pages/img/xin.png",
+        "iconPath": "pages/img/xin2.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/img/zhengshu1.png",
+        "iconPath": "pages/img/zhengshu.png",
+        "pagePath": "pages/sort/sort",
+        "text": "排名"
+      },
+      {
+        "selectedIconPath": "pages/img/list1.png",
+        "iconPath": "pages/img/list.png",
+        "pagePath": "pages/activeList/activeList",
+        "text": "评委专区"
+      },
+      {
+        "selectedIconPath": "pages/img/user.png",
+        "iconPath": "pages/img/wode.png",
+        "pagePath": "pages/person/person",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap0.json"
+}

@@ -1,0 +1,9 @@
+page{
+  background: #141414;
+}
+.xingxing{
+ display:flex;align-items:center;margin-left:30rpx;
+}
+.xingxing1{
+display:flex;align-items:center;
+}

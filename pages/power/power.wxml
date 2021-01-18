@@ -1,0 +1,15 @@
+<view>
+  <view style="display:flex;justify-content:center;">
+    <image src="../img/suo.png" style="width:598rpx;height:574rpx;margin-top:100rpx;"></image>
+  </view>
+  <view style="padding:0 90rpx;margin-top:100rpx;">
+    <input bindblur="bindKeyInput"  style="color:#fff; border:1rpx solid #FDFFA7;height:75rpx;border-radius:5px;margin-top:60rpx;padding-left:30rpx;" value="{{code}}" ></input>
+  </view>
+  
+  <view style="color:#999899;font-size:30rpx;display:flex;justify-content:center;margin-top:20rpx;">请输入正确的邀请密保</view>
+  <view style="display:flex;align-items:center;justify-content:center;margin-top:26rpx;">
+    <image src="../img/tishi.png" style="width:38rpx;height:38rpx;"></image>
+    <view style="color:#999899;font-size:30rpx;display:flex;justify-content:center;margin-left:20rpx;">一个密保仅可使用一次</view> 
+  </view>
+  <view bindtap="ma" style="color:#fff;border-radius:60rpx; display:flex;align-items:center;justify-content:center; margin:0 auto;margin-top:40rpx; width:80%;height:80rpx; background:linear-gradient(90deg,rgba(245,226,171,1),rgba(184,146,69,1));border:2px solid rgba(253,255,167,1);border-radius:45px;color:rgba(51,51,51,1);">提交</view>
+</view>

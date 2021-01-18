@@ -1,0 +1,12 @@
+<view style="padding-top:19px;">
+  <view wx:for="{{list}}"  wx:for-index="index">
+    <view style="color:#fff; margin-left:4%;margin-bottom:25rpx;">{{item.zimu}}、{{item.evaluateType}}</view>
+    <view style="color:#fff; margin-left:4%;margin-bottom:30rpx;">{{item.remarks}}</view>
+    <view style="margin:0 auto;margin-bottom:60rpx; width:90%;border:1rpx solid #EADE8C;height:90px;border-radius:8rpx;padding-top:5px;padding-left:3px;">
+      <textarea placeholder="请输入对自己的评价" bindblur="getVal" style="width:94%;height:100%;color:#fff;margin:0 auto;"  data-index="{{index}}" data-id="{{item.id}}" value="{{item.evaluateContent}}" maxlength="-1"></textarea>
+    </view>
+  </view>
+  
+ <view bindtap="tijiao"  style="left:3.5%; display:flex;align-items:center;justify-content:center; margin:0 auto; width:690rpx;height:82rpx;background:linear-gradient(90deg,rgba(245,226,171,1),rgba(184,146,69,1));border:2px solid rgba(253, 255, 167, 1);border-radius:41px;position:fixed;bottom:40px;z-index:100;">提交</view>
+
+</view>

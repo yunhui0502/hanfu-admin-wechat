@@ -1,0 +1,27 @@
+<view>
+</view>
+<view style="padding-top:19px;">
+  <view wx:for="{{list}}" >
+    <view style="color:#fff; margin-left:4%;margin-bottom:30rpx;">{{item.zimu}}、{{item.evaluateType}}</view>
+      <view style="margin:0 auto; min-height:90px; margin-bottom:60rpx; width:90%;border-bottom:1rpx solid #EADE8C;padding-top:5px;padding-left:3px;color:white">
+      {{item.templateContent}}
+      <!-- <textarea placeholder="请输入对自己的评价"  style="width:94%;height:100%;color:#fff;margin:0 auto;" data-index="{{index}}" data-id="{{item.id}}" value=""></textarea> -->
+    </view>
+  </view>
+  <view class="zuo" id="zuo" style=" width:96%; color:#fff;display:flex;flex-wrap:wrap;margin-left:4%;">
+    <view  wx:for="{{list}}" wx:for-index="index" style="margin-bottom:20rpx; margin-right:3%; display:flex;align-items:center;flex-direction:column;width:21%;">
+      <view style="margin-bottom:20rpx">
+        {{item.zimu}}
+      </view>
+      <view style="width:100%;height:50rpx;background:rgba(27,27,27,1);border:2px solid #F5E2AB;border-radius:10px;">
+        <input value="{{isscore==true?item.score:''}}" disabled="{{isscore==true?true:false}}"   type="number" style="color:#fff;text-align:center;" bindblur="getVal" data-index="{{index}}" placeholder="请评分"></input>
+      </view>
+    </view>
+    
+ 
+  </view>
+  <view style="height:220rpx"></view>
+  <view bindtap="tijiao" wx:if="{{isscore==false}}" style="left:3.5%; display:flex;align-items:center;justify-content:center; margin:0 auto; width:690rpx;height:82rpx;background:linear-gradient(90deg,rgba(245,226,171,1),rgba(184,146,69,1));border:2px solid rgba(253, 255, 167, 1);border-radius:41px;position:fixed;bottom:40px;z-index:100;" >提交</view>
+
+</view>
+ 

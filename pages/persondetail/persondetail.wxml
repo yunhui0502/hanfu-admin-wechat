@@ -1,0 +1,23 @@
+<view>
+  <view style="background:#383838;width:92%;padding:10px 0;display:flex;border-radius:10px;">
+    <image wx:if="{{!handover}}" src="{{ url + imgid}}" style="width:84px;height:84px;margin-left:20px;border-radius:42px;"></image>
+    <image wx:if="{{handover}}" src="../img/01.jpg" style="width:84px;height:84px;margin-left:20px;border-radius:42px;"></image>
+    <view style="margin-left:24px;">
+      <view style=" font-size:44rpx;font-family:PingFang SC;font-weight:bold;color:rgba(51,51,51,1);line-height:36px;background:linear-gradient(180deg,rgba(245,226,171,1) 0%, rgba(184,146,69,1) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">{{wo.username}}</view>
+      <view style="margin-top:8rpx; color:rgba(245,226,171,1);font-size:24rpx;">所属部门：{{wo.departmentName}}</view>
+      <view style="margin-top:8rpx;color:rgba(245,226,171,1);font-size:24rpx;">入职时间：{{wo.date?wo.date:'未完善信息'}}</view>
+    </view>
+  </view>
+  <!-- <view bindtap="check" style="font-size:32rpx;font-family:PingFang SC;color:rgba(238,223,119,1);width:91%;height:90rpx;background:rgba(255,255,255,0);border:1px solid rgba(253,255,167,1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-top:100rpx;">
+    查看个人履历
+  </view> -->
+  <view  bindtap="pingyou" style="font-size:32rpx;font-family:PingFang SC;color:rgba(238,223,119,1);width:91%;height:90rpx;background:rgba(255,255,255,0);border:1px solid rgba(253,255,167,1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-top:25rpx;">
+    评优事迹
+  </view>
+  <view bindtap="xianchang" wx:if="{{type=='score'&&common==1}}" style="font-size:32rpx;font-family:PingFang SC;color:rgba(238,223,119,1);width:91%;height:90rpx;background:rgba(255,255,255,0);border:1px solid rgba(253,255,167,1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-top:25rpx;">
+   现场汇报
+  </view>
+  <view>
+
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<view style="width:100%;height:100%;">
+  <view style="width:100%;height:100%;">
+    <image src="../img/navpic.jpg" style="width:100%;height:100%;"></image>
+  </view>
+  <view style="width:100%;height:100%;background:rgba(0,0,0,0.5);position:fixed;top:7%;left:0.5%;" wx:if="{{show}}">
+    <view style="background:rgba(0,0,0,0.7);width:87%;padding:10rpx 2% ;margin-left:4%;padding-bottom:60rpx;padding-top:100rpx;border-radius:10px; margin-top:200rpx;border:2px solid #F5E2AB;">
+      <view style="color:#333333;font-size:25px;font-weight:blod;display:flex;justify-content:center;color:#F5E2AB;font-weight:blod;">您还未登录</view>
+      <view style="color:#999999;font-size:14px;font-weight:blod;color:#FCF8B8;justify-content:center;display:flex;margin-top:16rpx;">请先登录再进行操作</view>
+      <view style="display:flex;justify-content:center;margin-top:47rpx;width:100%;">
+        <image src="../img/weixin.png" style="width:179rpx;height:179rpx;"></image>
+      </view>
+      <view style="width:100%; display:flex;align-items:center;margin-top:55rpx;justify-content:space-between;padding:0 30px;">
+        <view style="justify-content:center;background:#fff;color:#999999;border-radius:15px; width:208rpx;height:70rpx;font-size:32rpx;display:flex;align-items:center;height:90rpx;" bindtap="nologin">暂不登录</view>
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="background:linear-gradient(90deg,rgba(234,222,140,1),rgba(203,177,93,1));border:1px solid rgba(253,255,167,1);border-radius:15px;justify-content:center;width:208rpx;height:90rpx;font-size:32rpx;display:flex;align-items:center;color:#fff;">立即登录 </button>
+      </view>
+    </view>
+  </view>
+</view>

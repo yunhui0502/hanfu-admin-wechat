@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<text class="text">注册以使用更多服务</text>
+
+<view>
+  <input placeholder="请输入公司编号" bindblur="usernameInput" value="{{authKey}}"></input>
+</view>
+
+<view class="view">
+  <input placeholder="请输入手机号码" maxlength="11" bindblur="passwordInput" value="{{passwd}}"></input>
+</view>
+
+<view class="view1">
+  <input placeholder="请输入验证码"></input>
+  <view class="yzm">
+    <span>获取验证码</span>
+  </view>
+</view>
+
+<view class="register" bindtap="register">注册</view>
